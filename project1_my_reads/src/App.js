@@ -53,19 +53,20 @@ function App() {
       })
     }
   }
+  
   const filterCollection = (i) => {
     if(i) {
       BooksAPI.search(i).then((books) => {
-        if (!books.error) {
-          userBook.map((newBook) => {
-            const book = books.find((book) => book.id === newBook.id)
-            if (book) {
-              books.shelf = newBook.shelf;
-            } 
-          })
-          setCollection(books)
+        if(!books.error) {
+          for(const book of books) {
+            const foundBook = userBook.find(userBook => userBook.id === book.id)
+            if(foundBook) {
+              book.shelf = foundBook.shelf
+            }
         }
-      })
+        setCollection(books)
+      }
+    })
     }
     setCollection([])
   }
