@@ -2,11 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import BookItem from './component/book/BookItem';
 import reportWebVitals from './reportWebVitals';
-import BookOption from './component/book/BookOption';
-import MainPage from './component/book/MainPage';
-import BookCollection from './component/book/BookCollection';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

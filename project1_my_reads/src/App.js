@@ -8,7 +8,7 @@ import SearchPage from './component/search/SearchPage';
 function App() {
   const [userBook, setUserBook] = useState([])
   const [collection, setCollection] = useState([])
-  const [shelf, setShelf] = useState({
+  const [, setShelf] = useState({
     currentlyReading: [],
     wantToRead: [],
     read: [],
